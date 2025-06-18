@@ -5,7 +5,8 @@ use Assigment4KB;
 CREATE TABLE DONOR(
     -> DonorID int not null primary key,
     -> DonorFN varchar(10),
-    -> DonorLN varchar(10));
+    -> DonorLN varchar(10)
+    -> );
 
 INSERT INTO DONOR VALUES
     -> (1, "Kornelia", "Buszka");
@@ -18,7 +19,10 @@ INSERT INTO DONOR VALUES
 
 
 CREATE TABLE NUTRITION (
-    -> NutririonID INT NOT NULL PRIMARY KEY);
+    -> NutririonID INT NOT NULL PRIMARY KEY,   
+    -> NFName varchar(20),
+    -> NLName varchar(20)
+    -> );
 
 INSERT INTO NUTRITION (NutririonID) VALUES (1);
 INSERT INTO NUTRITION VALUES
@@ -26,8 +30,8 @@ INSERT INTO NUTRITION VALUES
     -> (3);
 
 CREATE TABLE NUTRITION_SPECIALIZATION ( 
-    NutririonID INT, 
-    Nutrition_Specialization VARCHAR(100), 
+    NutririonID INT NOT NULL PRIMARY KEY, 
+    Nutrition_Specialization VARCHAR(100) NOT NULL PRIMARY KEY, 
     FOREIGN KEY (NutririonID) REFERENCES NUTRITION(NutririonID));
 
 ALTER TABLE NUTRITION
@@ -62,9 +66,9 @@ CREATE TABLE TEAM (
     -> FOREIGN KEY (NutritionID) REFERENCES NUTRITION(NutritionID)
     -> );
 
- CREATE TABLE TEAM_DISCIPLINE (
-    -> TeamID INT,
-    -> Team_Discipline VARCHAR(100),
+ CREATE TABLE TEAM_DIS (
+    -> TeamID INT NOT NULL PRIMARY KEY,
+    -> Team_Discipline VARCHAR(100) NOT NULL PRIMARY KEY,
     -> FOREIGN KEY (TeamID) REFERENCES TEAM(TeamID)
     ->);
 
@@ -114,10 +118,10 @@ CREATE TABLE SPRINT (
     -> );
 
 CREATE TABLE MONEYTRANSFER (
-    -> MTDate DATE,
+    -> MTDate DATE NOT NULL PRIMARY KEY,
     -> MTAmount DECIMAL(12,2),
-    -> DonorID INT,
-    -> TeamID INT,
+    -> DonorID INT NOT NULL PRIMARY KEY,
+    -> TeamID INT NOT NULL PRIMARY KEY,
     -> FOREIGN KEY (DonorID) REFERENCES DONOR(DonorID),
     -> FOREIGN KEY (TeamID) REFERENCES TEAM(TeamID)
     -> );
