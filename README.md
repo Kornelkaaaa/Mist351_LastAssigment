@@ -62,5 +62,27 @@ This project simulates a real-world database for the **Foundation “Yes For Wat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/swimming-team-database.git
-   cd swimming-team-database
+   git clone https://github.com/Kornelkaaaa/Task4.git
+   cd Task4
+
+2. Launch MySQL and run
+  ```bash
+  SOURCE schema.sql;
+  SOURCE data_insert.sql;
+  SOURCE queries.sql;
+```
+3. Modify and test additional queries as needed!
+
+---
+
+## 👩‍💻 Author
+Kornelia Buszka
+
+---
+
+## 📜 License
+For academic and nonprofit use. Attribution appreciated.
+
+Would you like this uploaded as a `.md` file or zipped with the rest of the project structure (`schema.sql`, etc.)? I can generate everything ready for GitHub.
+
+
