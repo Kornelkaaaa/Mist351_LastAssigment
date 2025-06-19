@@ -1,4 +1,3 @@
-# Task4
 # 🏊 Assignment 4: Competitive Swimming Team Database
 
 A comprehensive SQL database to support the operations and grant evaluation of European water sports teams, built around athlete performance, facility logistics, and donor tracking.
